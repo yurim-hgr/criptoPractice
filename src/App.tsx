@@ -70,8 +70,8 @@ function App() {
 
   return (
     <>
-    
-      <Router2 />
+      <GlobalStyle />
+      <Router />
     </>
   );
 }
@@ -81,3 +81,5 @@ export default App;
 // <GlobalStyle />
 // <Router />
 // </>
+
+// <Router2 /> 

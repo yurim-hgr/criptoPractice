@@ -7,7 +7,7 @@ import {theme , lighttheme} from "./theme";
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
 root.render(
   <div>
-    <ThemeProvider theme ={lighttheme}>
+    <ThemeProvider theme ={theme}>
       <App />
     </ThemeProvider>
   </div>
