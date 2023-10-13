@@ -1,7 +1,7 @@
 
-import  Router from "./Router";
+import Router from "./Router";
+import Router2 from "./Router2";
 import { createGlobalStyle } from "styled-components";
-
 
 const GlobalStyle = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
@@ -70,9 +70,14 @@ function App() {
 
   return (
     <>
-      <GlobalStyle />
-      <Router />
+    
+      <Router2 />
     </>
   );
 }
 export default App;
+
+// <>
+// <GlobalStyle />
+// <Router />
+// </>
