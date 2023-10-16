@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import {Switch, Route, useLocation, useParams } from "react-router-dom";
+import {Switch, Route, useLocation, useParams, Link } from "react-router-dom";
 import styled from "styled-components";
 import Chart from "./Chart";
 import Price from "./Price";
@@ -113,6 +113,28 @@ const Description = styled.p`
   margin: 20px 0px;
 `;
 
+const Tabs = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 25px 0px;
+  gap: 10px;
+  
+`;
+
+const Tab = styled.span`
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 400;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 7px 0px;
+  border-radius: 10px;
+ 
+  a {
+    display: block;
+  }
+`;
+
 function Coin() {
   const { coinId } = useParams<RouteParams>();
   const [loading , setLoading ] = useState(true);
@@ -169,6 +191,22 @@ function Coin() {
             <span>{priceInfo?.max_supply}</span>
           </OverviewItem>
         </Overview>
+
+        <Tabs>
+            <Tab>
+
+                <Link to={`/${coinId}/price`}>price</Link>
+            </Tab>
+        </Tabs>
+        <Tabs>
+            <Tab>
+
+                <Link to={`/${coinId}/chart`}>chart</Link>
+            </Tab>
+        </Tabs>
+
+
+
         <Switch>
           <Route path={`/${coinId}/price`}>
             <Price />
