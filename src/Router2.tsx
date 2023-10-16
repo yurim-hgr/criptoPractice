@@ -1,16 +1,20 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import First from "./pages/First";
-import PassageInsert from "./pages/PassageInsert";
+import Main from "./pages/Main";
+import Insert from "./pages/Insert";
+import PassageOpen from "./pages/PassageOpen";
 
 function Router2() {
     return (
     <BrowserRouter>
         <Switch>
-            <Route path="/:type">
-                <PassageInsert />
+            <Route path="/type1"   >
+                <PassageOpen />
+            </Route>
+            <Route path="/type2" >
+                <Insert />
             </Route>
             <Route path="/">
-                <First />
+                <Main />
             </Route>
         </Switch>
     </BrowserRouter>

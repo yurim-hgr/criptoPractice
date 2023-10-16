@@ -12,7 +12,8 @@ const Header = styled.header`
     height: 15vh;
     display: flex;
     justify-content: center;
-    align-items: center;`;
+    align-items: center;
+    `;
 
 const CoinList = styled.ul``;
 

@@ -8,17 +8,17 @@ interface RouteParams{
 
 const textarea = styled.textarea``;
 
-const input = styled.input`
+// const Input = styled.`
     
-`;
+// `;
 
 const Title = styled.div``;
 
 function Second() {
-    const {type}= useParams<RouteParams>();
-    console.log(type)
+    // const {type}= useParams<RouteParams>();
+    // console.log(type)
     
-    return <h1>{type == "type1"? "지문 불러오기 내용 ": "지문입력 내용"}</h1>
+    return <h1>지문 불러오기</h1>
 }
 
 
