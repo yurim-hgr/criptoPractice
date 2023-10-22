@@ -1,15 +1,25 @@
-import React from 'react';
+import React from "react";
 import ReactDOM from "react-dom/client";
-import App from './App';
-import { ThemeProvider } from 'styled-components';
-import {theme , lighttheme} from "./theme";
+import App from "./App";
+import { ThemeProvider } from "styled-components";
+import { theme, lighttheme } from "./theme";
+import {
+  QueryClient,
+  QueryClientProvider,
+  useQuery,
+} from "@tanstack/react-query";
 
-const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+const queryClient = new QueryClient();
+
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
 root.render(
   <div>
-    <ThemeProvider theme ={theme}>
-      <App />
-    </ThemeProvider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeProvider theme={theme}>
+        <App />
+      </ThemeProvider>
+    </QueryClientProvider>
   </div>
 );
-
