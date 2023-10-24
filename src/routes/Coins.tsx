@@ -72,8 +72,9 @@ function Coins() {
   //     setLoading(false);
   //   })();
   // }, []);
-  // console.log(coins);
-  const {isLoading , data } = useQuery<CoinsInterface[]>(["allCoins"], fetchCoins);
+  const {isLoading , data } = useQuery<CoinsInterface[]>("allCoins", fetchCoins);
+  console.log(data);
+  
   return (
     <Container>
       <Header>
